@@ -2,13 +2,21 @@ const { Schema } = require("mongoose");
 const Mongoose = require("mongoose")
 Mongoose.Promise = global.Promise;
 Mongoose.set('useCreateIndex', true)
-const url = "mongodb://localhost:27017/FlightBooking_DB";
+const url = "mongodb://localhost:27017/";
 
 const customerSchema = Schema({
     customerId: String,
     customerName: String,
     walletAmount: Number,
     customerType: { type: String, enum: ['Platinum', 'Gold', 'Silver'] }
+}, { collection: "Customer" });
+
+
+const prooductSchema = Schema({
+    productId: String,
+    productName: String,
+    walletAmount: Number,
+    productType: { type: String, enum: ['Platinum', 'Gold', 'Silver'] }
 }, { collection: "Customer" });
 
 const flightBookingSchema = Schema({

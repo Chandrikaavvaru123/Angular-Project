@@ -21,13 +21,21 @@ const customerDb = [
     }
 ]
 
-const products = [
+const productsDb = [
     {
         name: "Tormove",
         saltCompostion: "paracetamol (500mg)",
         about :"Tormove Tablet is a medicine used to relieve pain and to reduce fever. It is used to treat many conditions such as headache, body ache, toothache and common cold.",
         use: ["pain relief", "fever"],
         sideEffects: ["dizziness", "lightheadedness"]
+
+      },
+      {
+        name: "Morphine ",
+        saltCompostion: "morphine sulfate",
+        about :"Morphine is an opioid agonist used for the relief of moderate to severe acute and chronic pain.",
+        use: ["pain relief"],
+        sideEffects: ["drowsiness", "stomach pain and cramps","nervousness"]
 
       },
 
@@ -82,7 +90,7 @@ const products = [
       }
 ]
 
-const quaterInfo = [
+const quaterInfoDb = [
     {
 
         quater: "Q32018",
@@ -123,23 +131,18 @@ const quaterInfo = [
 
         quater: "Q12019",
 
-        result: {
+        result:[
+             {
 
             sales: 1732405,
-
             otherIncome: 416.23,
-
             grossProfit: 182456.1,
-
             Depreciation: 3674.8,
-
             Interest: 9122.8,
-
             Tax: 22807,
-
             netProfit: 146851.5
-
         }
+    ]
 
     },
 
@@ -147,23 +150,18 @@ const quaterInfo = [
 
         quater: "Q22019",
 
-        result: {
+        result: [
+            {
 
             sales: 1689401,
-
             otherIncome: 289.58,
-
             grossProfit: 177309.7,
-
             Depreciation: 3802.8,
-
             Interest: 8865.49,
-
             Tax: 22163.7,
-
             netProfit: 142477.7
 
-        }
+        }]
 
     },
 
@@ -171,23 +169,18 @@ const quaterInfo = [
 
         quater: "Q32019",
 
-        result: {
+        result:[
+             {
 
             sales: 1547681,
-
             otherIncome: 126.3,
-
             grossProfit: 100912.4,
-
             Depreciation: 4009.6,
-
             Interest: 5045.62,
-
             Tax: 12614.05,
-
             netProfit: 79245.13
-
         }
+    ]
 
     },
 
@@ -195,23 +188,18 @@ const quaterInfo = [
 
         quater: "Q42019",
 
-        result: {
+        result: [{
 
             sales: 1809213,
-
             otherIncome: 320.5,
-
             grossProfit: 209113.1,
-
             Depreciation: 2988.9,
-
             Interest: 10455.65,
-
             Tax: 26139.14,
-
             netProfit: 169529.4
 
         }
+    ]
 
     },
 
@@ -219,23 +207,18 @@ const quaterInfo = [
 
         quater: "Q12020",
 
-        result: {
+        result: [{
 
             sales: 2187960,
-
             otherIncome: 319.6,
-
             grossProfit: 890567.7,
-
             Depreciation: 1128.5,
-
             Interest: 44528.4,
-
             Tax: 111320.9,
-
             netProfit: 733589.9
 
         }
+    ]
 
     }
 
@@ -326,5 +309,11 @@ exports.setupDb = () => {
                 })
             })
         })
+    })
+}
+
+exports.setupDb = () =>{
+    return collection.getProdutCollection().then((product) =>{
+        return 
     })
 }

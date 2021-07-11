@@ -291,29 +291,60 @@ const flightDb = [
     }
 ]
 
-exports.setupDb = () => {
-    return collection.getCustomerCollection().then((customer) => {
-        return customer.deleteMany().then(() => {
-            return customer.insertMany(customerDb).then(() => {
-                return collection.getFlightCollection().then((booking) => {
-                    return booking.deleteMany().then(() => {
-                        return booking.insertMany(flightDb).then((data) => {
-                            if (data) return "Insertion Successful"
-                            else {
-                                let err = new Error("Insertion failed");
+// exports.setupDb = () => {
+//     return collection.getCustomerCollection().then((customer) => {
+//         return customer.deleteMany().then(() => {
+//             return customer.insertMany(customerDb).then(() => {
+//                 return collection.getFlightCollection().then((booking) => {
+//                     return booking.deleteMany().then(() => {
+//                         return booking.insertMany(flightDb).then((data) => {
+//                             if (data) return "Insertion Successful"
+//                             else {
+//                                 let err = new Error("Insertion failed");
+//                                 err.status = 400;
+//                                 throw err;
+//                             }
+//                         })
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// }
+
+// return product.insertMany((productsDb).then(()=>{
+//     return collection.getQuaterCollection().then((quater) =>{
+//         return quater.deleteMany().then(() =>{
+//             return quater.insertMany(quaterInfoDb).then((data)=>{
+//                 if(data) return "Insertion Successful!"
+//                 else{
+//                     let err = new Error("Insertion Failed!");
+//                     err.status = 400;
+//                     throw err;
+//                 }
+//             })
+//         })
+//     })
+// }) )
+
+exports.setupDb = () =>{
+    return collection.getProdutCollection().then((product) =>{
+        return product.deleteMany().then(()=>{
+            return product.insertMany(productsDb).then(() =>{
+                return collection.getQuaterCollection().then((quater) =>{
+                    return quater.deleteMany().then(() =>{
+                        return quater.insertMany(quaterInfoDb).then((data)=>{
+                            if(data) return "Insertion Successful!"
+                            else{
+                                let err = new Error("Insertion Failed!");
                                 err.status = 400;
                                 throw err;
-                            }
+                            } 
                         })
                     })
                 })
             })
-        })
-    })
-}
 
-exports.setupDb = () =>{
-    return collection.getProdutCollection().then((product) =>{
-        return 
+        })
     })
 }

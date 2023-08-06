@@ -1,0 +1,11 @@
+@import "../../../assets/variables.scss";
+@import "../../../assets/colors.scss";
+
+.home-container {
+    .container{
+        .navbar-brand{
+            font-family: MarckScript;
+            color: $white;
+        }
+    }
+}

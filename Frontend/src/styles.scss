@@ -2,3 +2,11 @@
 @import './assets/colors.scss';
 @import './assets/variables.scss';
 @import './assets/mixins.scss';
+
+/* TAILWIND CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

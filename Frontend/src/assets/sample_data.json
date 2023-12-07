@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Dolo 650",
+      "price": 1.50,
+      "offer": "Buy 1 Get 1 Free",
+      "image": "https://i.imgur.com/Dolo650.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Crocin Advance",
+      "price": 1.75,
+      "offer": "10% Off",
+      "image": "https://i.imgur.com/CrocinAdvance.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Paracetamol",
+      "price": 0.50,
+      "offer": "20% Off",
+      "image": "https://i.imgur.com/Paracetamol.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Ibuprofen",
+      "price": 0.75,
+      "offer": "Flat 50% Off",
+      "image": "https://i.imgur.com/Ibuprofen.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Aspirin",
+      "price": 0.25,
+      "offer": "Buy 2 Get 1 Free",
+      "image": "https://i.imgur.com/Aspirin.jpg"
+    }
+  ]
+  
